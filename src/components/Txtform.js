@@ -2,14 +2,17 @@ import React ,{useState} from 'react'
 
 export default function Txtform(props) {
   const Upclick = () =>{
-    console.log("upper case was pressed");
     let newtext = text.toUpperCase();
     setText(newtext);
   }
   const lowclick = () =>{
-    console.log("upper case was pressed");
     let newtext = text.toLowerCase();
     setText(newtext);
+  }
+  //extra space clear
+  const spaceclean = () =>{
+    let newtext = text.split(/[ ]+ /);
+    setText(newtext.join(" "));
   }
   //copying fxn
   const handlecopy = () =>{
@@ -29,7 +32,6 @@ export default function Txtform(props) {
     c.click();
     }
   const change_ev = (event) =>{
-    console.log("Text changed");
     setText(event.target.value);
   }
   const[text , setText]= useState('');
@@ -37,9 +39,10 @@ export default function Txtform(props) {
      < > 
   <div className="container mb-3 xl">
     <h1 className={`text-${props.style==='light'?'dark':'light'}`}>{props.tsst}</h1>
-    <textarea className="form-control" style={{backgroundColor: props.style ==='light'?'white':'grey' ,color: props.style ==='light'?'black':'white'}}  value={text} onChange={change_ev} id="myBox" rows="8"></textarea>
+    <textarea className="form-control" style={{backgroundColor: props.style ==='light'?'white':'#471b68' ,color: props.style ==='light'?'black':'white'}}  value={text} onChange={change_ev} id="myBox" rows="8"></textarea>
   <button className="btn btn-primary mx-1 my-2" onClick={Upclick}>To Uppercase</button>
   <button className="btn btn-primary mx-1 my-2" onClick={lowclick}>To lowercase</button>
+  <button className="btn btn-primary mx-1 my-2" onClick={spaceclean}>Clear extraspace</button>
   <button className="btn btn-primary mx-1 my-2" onClick={save}>Download .txt file</button>
   <button className="btn btn-primary mx-1 my-2" onClick={handlecopy}>Copy text</button>
   <div className="container my-3">

@@ -11,7 +11,7 @@ function App() {
           if(switchstyle === 'light')
           {
             setvmode('dark');
-            document.body.style.backgroundColor= '#360989' ;
+            document.body.style.backgroundColor= 'rgb(112 8 191)' ;
             document.body.style.color= 'white' ;
           }
           else{
