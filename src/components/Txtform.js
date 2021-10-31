@@ -50,7 +50,9 @@ export default function Txtform(props) {
         {text.length} Characters
     </p>
     <p> 
-      Time required to read - {text.split(" ").length*0.008} minutes
+      Time required to read - {text.split(" ").filter((element)=> {
+       return element.length!== 0
+    }).length*0.008} minutes
     </p>
     <h2>
       Preview - <br/>
