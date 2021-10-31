@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/React-TextEditor/static/css/main.a617e044.chunk.css",
-    "main.js": "/React-TextEditor/static/js/main.628c8775.chunk.js",
-    "main.js.map": "/React-TextEditor/static/js/main.628c8775.chunk.js.map",
+    "main.js": "/React-TextEditor/static/js/main.a31793d9.chunk.js",
+    "main.js.map": "/React-TextEditor/static/js/main.a31793d9.chunk.js.map",
     "runtime-main.js": "/React-TextEditor/static/js/runtime-main.e9021d8f.js",
     "runtime-main.js.map": "/React-TextEditor/static/js/runtime-main.e9021d8f.js.map",
     "static/js/2.2c4be4db.chunk.js": "/React-TextEditor/static/js/2.2c4be4db.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e9021d8f.js",
     "static/js/2.2c4be4db.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.628c8775.chunk.js"
+    "static/js/main.a31793d9.chunk.js"
   ]
 }
