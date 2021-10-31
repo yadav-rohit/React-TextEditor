@@ -40,11 +40,11 @@ export default function Txtform(props) {
   <div className="container mb-3 xl">
     <h1 className={`text-${props.style==='light'?'dark':'light'}`}>{props.tsst}</h1>
     <textarea className="form-control" style={{backgroundColor: props.style ==='light'?'white':'#471b68' ,color: props.style ==='light'?'black':'white'}}  value={text} onChange={change_ev} id="myBox" rows="8"></textarea>
-  <button className="btn btn-primary mx-1 my-2" onClick={Upclick}>To Uppercase</button>
-  <button className="btn btn-primary mx-1 my-2" onClick={lowclick}>To lowercase</button>
-  <button className="btn btn-primary mx-1 my-2" onClick={spaceclean}>Clear extraspace</button>
-  <button className="btn btn-primary mx-1 my-2" onClick={save}>Download .txt file</button>
-  <button className="btn btn-primary mx-1 my-2" onClick={handlecopy}>Copy text</button>
+  <button disabled={text.length===0} className="btn btn-primary mx-1 my-2" onClick={Upclick}>To Uppercase</button>
+  <button disabled={text.length===0} className="btn btn-primary mx-1 my-2" onClick={lowclick}>To lowercase</button>
+  <button disabled={text.length===0} className="btn btn-primary mx-1 my-2" onClick={spaceclean}>Clear extraspace</button>
+  <button disabled={text.length===0} className="btn btn-primary mx-1 my-2" onClick={save}>Download .txt file</button>
+  <button disabled={text.length===0} className="btn btn-primary mx-1 my-2" onClick={handlecopy}>Copy text</button>
   <div className="container my-3">
     <h1>Summary of text</h1>
     <p> {text.split(" ").filter((element)=> {
@@ -60,7 +60,7 @@ export default function Txtform(props) {
     <h2>
       Preview - <br/>
       </h2>
-      <p>{text.length>0?text:"Enter Text To Preview"}</p>
+      <p>{text.length>0?text:"Nothing to preview"}</p>
     
   </div>
        </div>
